@@ -1,59 +1,37 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+    import logo from '$lib/images/LogoAI.png';
 </script>
-
-<svelte:head>
-	<title>Gay Porn</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+    <div class="center">
+        <img src={logo} alt="Welcome" />
+    </div>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+    <h2 class="text">RejuvAI - Your Personal AI Healthcare Overseer</h2>
 </section>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Align items to the start of the container */
+        align-items: center;
+        flex: 1; /* Adjusted to take full height of viewport */
+        padding-top: 20px; /* Add padding to push content down from the top */
+    }
 
-	h1 {
-		width: 100%;
-	}
+    .center {
+        width: 100%;
+        max-width: 500px; /* Adjust the maximum width as needed */
+        text-align: center;
+    }
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
+    .center img {
+        width: 100%;
+        height: auto; /* Ensures the aspect ratio of the image is maintained */
+    }
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
+    .text {
+        font-weight: bold;
+        margin-top: 20px; /* Adjust as needed */
+    }
 </style>
