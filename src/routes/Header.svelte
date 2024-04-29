@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
+	import logo from '$lib/images/LogoAI.png';
 </script>
 
 <header>
@@ -13,7 +12,6 @@
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
@@ -22,18 +20,20 @@
 			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
 				<a href="/about">About</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
+			<li aria-current={$page.url.pathname === '/faq' ? 'page' : undefined}>
+				<a href="/faq">FAQ</a>
+			</li>
+			<li aria-current={$page.url.pathname === '/contact' ? 'page' : undefined}>
+				<a href="/contact">Contact</a>
 			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
+		<svg viewBox="0 0 4 6" aria-hidden="true">
 		</svg>
 	</nav>
+	
 
 	<div class="corner">
 		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
 		</a>
 	</div>
 </header>
@@ -58,8 +58,8 @@
 	}
 
 	.corner img {
-		width: 2em;
-		height: 2em;
+		width: 10em;
+		height: 10em;
 		object-fit: contain;
 	}
 
@@ -73,10 +73,6 @@
 		width: 2em;
 		height: 3em;
 		display: block;
-	}
-
-	path {
-		fill: var(--background);
 	}
 
 	ul {
