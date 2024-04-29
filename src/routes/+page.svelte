@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Gay Porn</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
@@ -14,7 +14,7 @@
 		<span class="welcome">
 			<picture>
 				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome how tf" />
+				<img src={welcome_fallback} alt="Welcome" />
 			</picture>
 		</span>
 
