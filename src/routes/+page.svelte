@@ -1,20 +1,5 @@
 <script>
 	import logo from '$lib/images/LogoAI.png';
-	document.addEventListener('DOMContentLoaded', function () {
-		const diseaseInput = document.getElementById('diseaseInput');
-		const medicationInput = document.getElementById('medicationInput');
-		const surgeryInput = document.getElementById('surgeryInput');
-		const miscInput = document.getElementById('miscInput');
-		const getResultsButton = document.getElementById('getResultsButton');
-		const outputResult = document.getElementById('outputResult');
-
-		// Event listener for Get Results button
-		getResultsButton.addEventListener('click', function () {
-			// Example: Concatenate input values and display in outputResult
-			const result = `Disease: ${diseaseInput.value}\nMedication: ${medicationInput.value}\nSurgery: ${surgeryInput.value}\nMisc: ${miscInput.value}`;
-			outputResult.value = result;
-		});
-	});
 </script>
 
 <section>
@@ -26,14 +11,14 @@
 	<div class="container">
 		<div class="input-container">
 			<h2 class="large-text">Current Disease(s)</h2>
-			<input id="diseaseInput" class="textbox" type="text" placeholder="Enter Disease" />
+			<input id="diseaseInput" class="textbox" type="Disease" placeholder="Enter Disease" />
 		</div>
 		<div class="input-container">
 			<h2 class="large-text">Current Prescribed Medication(s)</h2>
 			<input
 				id="medicationInput"
 				class="textbox"
-				type="text"
+				type="Medication"
 				placeholder="Enter Current Medication"
 			/>
 		</div>
@@ -42,7 +27,7 @@
 			<input
 				id="surgeryInput"
 				class="textbox"
-				type="text"
+				type="Surgery"
 				placeholder="Enter Recent Surgeries (if any)"
 			/>
 		</div>
@@ -51,7 +36,7 @@
 			<input
 				id="miscInput"
 				class="textbox"
-				type="text"
+				type="Misc"
 				placeholder="i.e Mental or Other Underlying Conditions"
 			/>
 		</div>
@@ -61,7 +46,7 @@
 		<p />
 		<div class="large-input-container">
 			<h2 class="large-text">Program Result</h2>
-			<input id="outputResult" class="large-textbox" type="text" placeholder="Output" />
+			<input id="outputResult" class="large-textbox" type="Disease" placeholder="Output" />
 		</div>
 	</div>
 </section>
