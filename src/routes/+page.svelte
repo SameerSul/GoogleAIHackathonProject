@@ -73,11 +73,10 @@
 		color: #008080; /* Teal color for headings */
 	}
 
-    .large-text {
-        font-size:1.5em;
-
-    }
-    .larger-text {
+	.large-text {
+		font-size: 1.5em;
+	}
+	.larger-text {
 		font-size: 2em;
 	}
 
