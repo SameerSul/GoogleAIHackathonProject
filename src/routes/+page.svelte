@@ -3,7 +3,6 @@
 </script>
 
 <section>
-	<h1>RejuvAI - Your Personal AI Healthcare Overseer</h1>
 	<h1 class="larger-text">RejuvAI - Your Personal AI Healthcare Overseer</h1>
 	<h2 class="large-text">
 		Interested in trying it out? Use the boxes below to better inform us on how we can help you
@@ -75,7 +74,11 @@
 		color: #008080; /* Teal color for headings */
 	}
 
-	.larger-text {
+    .large-text {
+        font-size:1.5em;
+
+    }
+    .larger-text {
 		font-size: 2em;
 	}
 
