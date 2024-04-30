@@ -63,7 +63,7 @@
         color: white; /* Adjust color as needed */
         text-decoration: none;
         font-weight: bold;
-        font-size: 2em; /* Adjust font size as needed */
+        font-size: 1.75em; /* Adjust font size as needed */
     }
 
     .logo {
