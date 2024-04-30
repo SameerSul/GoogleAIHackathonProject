@@ -25,7 +25,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to NOT learn SvelteKit</p>
+		<p><strong>Disclaimer: </strong>RejuvAI is not always accurate as Gemini is prone to making mistakes, always double check with a medical professional</p>
 	</footer>
 </div>
 

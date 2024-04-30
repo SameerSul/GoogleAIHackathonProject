@@ -2,11 +2,8 @@
     import logo from '$lib/images/LogoAI.png';
 </script>
 <section>
-    <div class="center">
-        <img src={logo} alt="Welcome" />
-    </div>
 
-    <h2 class="text">RejuvAI - Your Personal AI Healthcare Overseer</h2>
+    <h2>RejuvAI - Your Personal AI Healthcare Overseer</h2>
 </section>
 
 <style>

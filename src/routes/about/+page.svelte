@@ -6,23 +6,28 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
+	<h1>Our Focus</h1>
 
-	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
+	<p class="larger-text">
+
+		Welcome to RejuvAI, where our mission is dedicated to revolutionizing healthcare for those who are overlooked by traditional healthcare systems. 
+		Leveraging the power of Google's Gemini AI Model, we offer a dynamic, sustainable and easily available solution tailored to each and every individual's needs. 
+		Whether it's directing users with specific diseases with the most effective medications; or if it is supporting individuals facing post-surgery recovery by recommending 
+		personalized physiotherapy exercises and targeted supplements to improve their condition. 
+	</p>
+		
+	<p class="larger-text">
+		Here at RejuvAI we're committed to enhancing our users well-being at every step.
+		But our commitment doesn't stop there. We understand that recovery isn't just physical; it's mental and emotional too. That's why we provide our solutions in many different forms, 
+		some of which can be specified by the user, allowing us to take a truly dynamic approach to better assist our users. 
+
 	</p>
 
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
-	</p>
-
-	<p>
-		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-		using it with JavaScript disabled!
-	</p>
 </div>
+
+<style>
+	.larger-text{
+
+		font-size: 1.5em;
+	}
+</style>
