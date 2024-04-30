@@ -1,5 +1,20 @@
 <script>
 	import logo from '$lib/images/LogoAI.png';
+	document.addEventListener('DOMContentLoaded', function () {
+		const diseaseInput = document.getElementById('diseaseInput');
+		const medicationInput = document.getElementById('medicationInput');
+		const surgeryInput = document.getElementById('surgeryInput');
+		const miscInput = document.getElementById('miscInput');
+		const getResultsButton = document.getElementById('getResultsButton');
+		const outputResult = document.getElementById('outputResult');
+
+		// Event listener for Get Results button
+		getResultsButton.addEventListener('click', function () {
+			// Example: Concatenate input values and display in outputResult
+			const result = `Disease: ${diseaseInput.value}\nMedication: ${medicationInput.value}\nSurgery: ${surgeryInput.value}\nMisc: ${miscInput.value}`;
+			outputResult.value = result;
+		});
+	});
 </script>
 
 <section>
@@ -11,25 +26,42 @@
 	<div class="container">
 		<div class="input-container">
 			<h2 class="large-text">Current Disease(s)</h2>
-			<input class="textbox" type="Disease" placeholder="Enter Disease" />
+			<input id="diseaseInput" class="textbox" type="text" placeholder="Enter Disease" />
 		</div>
 		<div class="input-container">
 			<h2 class="large-text">Current Prescribed Medication(s)</h2>
-			<input class="textbox" type="Medication" placeholder="Enter Current Medication" />
+			<input
+				id="medicationInput"
+				class="textbox"
+				type="text"
+				placeholder="Enter Current Medication"
+			/>
 		</div>
 		<div class="input-container">
 			<h2 class="large-text">Previous Surgeries (if any)</h2>
-			<input class="textbox" type="Surgery" placeholder="Enter Recent Surgeries (if any)" />
+			<input
+				id="surgeryInput"
+				class="textbox"
+				type="text"
+				placeholder="Enter Recent Surgeries (if any)"
+			/>
 		</div>
 		<div class="input-container">
 			<h2 class="large-text">Anything else important you wish to share?</h2>
-			<input class="textbox" type="Misc" placeholder="i.e Mental or Other Underlying Conditions" />
+			<input
+				id="miscInput"
+				class="textbox"
+				type="text"
+				placeholder="i.e Mental or Other Underlying Conditions"
+			/>
 		</div>
-		<div class="button-container"><input class="button" type="button" value="Get Results" /></div>
+		<div class="button-container">
+			<input id="getResultsButton" class="button" type="button" value="Get Results" />
+		</div>
 		<p />
 		<div class="large-input-container">
 			<h2 class="large-text">Program Result</h2>
-			<input class="large-textbox" type="Disease" placeholder="Output" />
+			<input id="outputResult" class="large-textbox" type="text" placeholder="Output" />
 		</div>
 	</div>
 </section>
