@@ -49,72 +49,75 @@
 		grid-template-columns: repeat(2, 1fr); /* Two columns */
 		gap: 20px; /* Adjust the gap between items */
 	}
-	.container {
-		padding: 20px;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr); /* Two columns */
-		gap: 40px; /* Adjust the gap between items */
-	}
 
-	.input-container {
-		background: linear-gradient(to right, #0f79ee, #000000);
-		background-clip: text;
-		color: transparent;
-	}
-
-	.large-input-container {
-		display: block;
-		background: linear-gradient(to right, #0f79ee, #000000);
-		background-clip: text;
-		color: transparent;
-	}
-
-	.button-container {
-		display: block;
-		background: linear-gradient(to right, #0f79ee, #000000);
-		background-clip: text;
-		color: transparent;
-	}
-
-	.textbox {
-		width: 300px;
-		height: 50px;
-		font-weight: bold;
-		background-color: #a4f7c5; /* Fill color */
+	.textbox,
+	.large-textbox {
+		width: 300px; /* Default width for regular textboxes */
+		height: 50px; /* Default height for regular textboxes */
+		background-color: #e8f8f5; /* Soothing pale teal background */
+		border: 2px solid #008080; /* Teal border for better visibility */
 		border-radius: 10px;
+		padding: 2px; /* Padding inside the textbox for inner space */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+		transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transitions */
 	}
 
 	.large-textbox {
-		width: 500px;
-		height: 200px;
-		font-weight: bold;
-		background-color: #a4f7c5; /* Fill color */
-		border-radius: 10px;
-	}
-	.button {
-		border: none;
-		font-weight: bolder;
-		display: flex;
-		border-radius: 5px; /* Adjust the radius as needed */
-		padding: 10px 20px; /* Adjust padding as needed */
-		background-color: #d6d4ff; /* Change background color if desired */
-		color: #000000; /* Change text color if desired */
-		cursor: pointer;
+		width: 500px; /* Specific width for larger textbox */
+		height: 200px; /* Specific height for larger textbox */
+		background-color: #e8f8f5; /* Consistent soothing pale teal for larger textbox */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Consistent shadow with regular textboxes */
+		transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Consistent transitions */
 	}
 
-	.large-text {
-		font-weight: bold;
-		font-size: 1.5em;
-		background: linear-gradient(to right, #0f79ee, #000000);
-		background-clip: text;
-		color: transparent;
+	h2 {
+		margin-bottom: 20px;
+		color: #008080; /* Teal color for headings */
 	}
 
 	.larger-text {
-		font-weight: bold;
 		font-size: 2em;
-		background: linear-gradient(to right, #0f79ee, #000000);
-		background-clip: text;
-		color: transparent;
+	}
+
+	/* Styles for input fields inside textboxes */
+	input[type='text'] {
+		width: 100%; /* Full width of the textbox */
+		height: 46px; /* Slightly smaller to fit within 50px height of textbox */
+		border: none;
+		border-radius: 8px; /* Slightly less than textbox for aesthetic purpose */
+		padding: 0 10px;
+		font-size: 16px;
+		box-sizing: border-box; /* Padding and border included in width/height */
+		background-color: transparent; /* Ensure input background matches textbox */
+		color: #333333; /* Dark gray for text */
+	}
+
+	input[type='text']:focus {
+		outline: none;
+		border-color: #ff6f61; /* Coral color when focused */
+	}
+
+	/* Button styles */
+	button,
+	.button {
+		background-color: #ff6f61; /* Coral for buttons */
+		color: #ffffff; /* White text for contrast */
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.3s ease-in-out; /* Smooth transition for color change */
+	}
+
+	button:hover,
+	.button:hover {
+		background-color: #e65550; /* Darker coral on hover */
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect on hover for button */
+	}
+
+	/* Hover effects for textboxes to improve interactivity */
+	.textbox:hover,
+	.large-textbox:hover {
+		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Larger shadow on hover for a lifting effect */
 	}
 </style>
