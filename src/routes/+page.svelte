@@ -40,7 +40,6 @@
 		flex-direction: column;
 		align-items: center;
 		flex: 1;
-		padding-top: 20px;
 	}
 
 	.container {
