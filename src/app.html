@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
+		meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>RejuvAI - Your Personal AI Healthcare Overseer</title>
+		<link rel="stylesheet" href="styles.css" />
+		<!-- Your CSS file -->
+		<script src="$lib/images/LogoAI.png"></script>
+		<!-- Assuming this is a script, usually it's an img tag -->
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const inputs = document.querySelectorAll('.textbox');
+				inputs.forEach((input) => {
+					input.addEventListener('keydown', function (event) {
+						if (event.key === 'Enter') {
+							collectAndDisplayResults();
+							event.preventDefault(); // Prevent form submission or other default actions
+						}
+					});
+				});
+
+				document
+					.getElementById('getResultsButton')
+					.addEventListener('click', collectAndDisplayResults);
+
+				function collectAndDisplayResults() {
+					const disease = document.getElementById('diseaseInput').value;
+					const medication = document.getElementById('medicationInput').value;
+					const surgery = document.getElementById('surgeryInput').value;
+					const misc = document.getElementById('miscInput').value;
+
+					document.getElementById(
+						'outputResult'
+					).value = `Disease: ${disease}, Medication: ${medication}, Surgery: ${surgery}, Other: ${misc}`;
+				}
+			});
+		</script>
 	</body>
 </html>

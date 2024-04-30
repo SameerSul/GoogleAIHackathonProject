@@ -1,7 +1,3 @@
-<script>
-	import logo from '$lib/images/LogoAI.png';
-</script>
-
 <section>
 	<h1 class="larger-text">RejuvAI - Your Personal AI Healthcare Overseer</h1>
 	<h2 class="large-text">
