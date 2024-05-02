@@ -25,7 +25,10 @@
 	</main>
 
 	<footer>
-		<p><strong>Disclaimer: </strong>RejuvAI is not always accurate as Gemini is prone to making mistakes, always double check with a medical professional</p>
+		<p>
+			<strong>Disclaimer: </strong>RejuvAI is not always accurate as Gemini is prone to making
+			mistakes, always double check with a medical professional
+		</p>
 	</footer>
 </div>
 
@@ -53,11 +56,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
-		background-color:black;
-	}
-
-	footer a {
-		font-weight: bold;
+		background-color: black;
 	}
 
 	@media (min-width: 480px) {
