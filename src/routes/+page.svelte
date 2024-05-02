@@ -42,9 +42,45 @@
 		<p />
 		<div class="large-input-container">
 			<h2 class="large-text">Program Result</h2>
-			<input id="outputResult" class="large-textbox" type="Disease" placeholder="Output" />
+			<textarea id="outputResult" class="large-textbox" placeholder="Output"></textarea> <!-- Updated to textarea -->
 		</div>
 	</div>
+
+
+	<div class="button-container">
+		<input id="getResultsButton" class="button" type="button" value="Get Results" />
+		<button id="downloadButton" class="download-button">Download Results</button> <!-- Download button -->
+	</div>
+	
+	<!-- Your existing HTML content here -->
+	
+	<script>
+		// JavaScript to handle downloading of .ics file
+	document.getElementById('downloadButton').addEventListener('click', function() {
+		const outputContent = document.getElementById('outputResult').value;
+
+		// Create a blob with the content
+		const blob = new Blob([outputContent], { type: 'text/plain' });
+
+		// Create a URL for the blob
+		const url = window.URL.createObjectURL(blob);
+
+		// Create a link element
+		const link = document.createElement('a');
+		link.href = url;
+
+		// Set the filename
+		link.setAttribute('download', 'output.ics');
+
+		// Simulate a click on the link to trigger the download
+		document.body.appendChild(link);
+		link.click();
+
+		// Clean up
+		document.body.removeChild(link);
+		window.URL.revokeObjectURL(url);
+	});
+	</script>
 </section>
 
 <style>
@@ -133,5 +169,21 @@
 	.textbox:hover,
 	.large-textbox:hover {
 		box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Larger shadow on hover for a lifting effect */
+	}
+
+	.download-button {
+        background-color: #ff6f61; /* Coral for download button */
+        color: #ffffff; /* White text for contrast */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out; /* Smooth transition for color change */
+        margin-top: 10px; /* Adjust the spacing */
+    }
+
+    .download-button:hover {
+        background-color: #e65550; /* Darker coral on hover */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect on hover for button */
 	}
 </style>
