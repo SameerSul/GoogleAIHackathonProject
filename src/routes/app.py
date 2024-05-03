@@ -29,6 +29,7 @@ def generate_content():
 
     # Generate content using GEMINI AI model
     response = model.generate_content(prompt)
+    print(response.text)
 
     # Check if response contains a valid Part
     if response and response.result and response.result.candidates:
@@ -42,4 +43,4 @@ def generate_content():
     return jsonify({'error': 'Failed to generate valid response from the model'})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5174)
+    app.run(debug=True, port=5173)

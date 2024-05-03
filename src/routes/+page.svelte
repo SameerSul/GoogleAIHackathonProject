@@ -41,13 +41,8 @@
 		</div>
 		<p />
 		<div class="large-input-container">
-			<h2 class="large-text">Program Result</h2>
+			<h2 class="large-text">.ics Result</h2>
 			<textarea id="outputResult" class="large-textbox" placeholder="Output"></textarea> 
-		</div>
-
-		<div class="large-input-container">
-			<h2 class="large-text"> .ics Result</h2>
-			<textarea id="icsResult" class="large-textbox" placeholder="Output"></textarea> 
 		</div>
 
 	</div>
