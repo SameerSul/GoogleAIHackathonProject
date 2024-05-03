@@ -42,14 +42,19 @@
 		<p />
 		<div class="large-input-container">
 			<h2 class="large-text">Program Result</h2>
-			<textarea id="outputResult" class="large-textbox" placeholder="Output"></textarea> <!-- Updated to textarea -->
+			<textarea id="outputResult" class="large-textbox" placeholder="Output"></textarea> 
 		</div>
+
+		<div class="large-input-container">
+			<h2 class="large-text"> .ics Result</h2>
+			<textarea id="icsResult" class="large-textbox" placeholder="Output"></textarea> 
+		</div>
+
 	</div>
 
 
 	<div class="button-container">
-		<input id="getResultsButton" class="button" type="button" value="Get Results" />
-		<button id="downloadButton" class="download-button">Download Results</button> <!-- Download button -->
+		<button id="downloadButton" class="download-button">Download Results</button> 
 	</div>
 	
 	<!-- Your existing HTML content here -->
